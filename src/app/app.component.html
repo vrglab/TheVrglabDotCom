@@ -1,13 +1,19 @@
 <mat-toolbar color="primary">
   <div class="left-section">
-    <img src="assets/studiowordmarkwhite.png" alt="Logo" style="
-    float: left;
-    width: 120px;
-    height: 120px;" (click)="navigateToHome()">
+    <img src="assets/studiowordmarkwhite.png" alt="Logo" class="logo" (click)="navigateToHome()">
   </div>
   <div class="right-section">
     <button (click)="navigateToGames()" mat-button class="tool-bar-button">Games</button>
+    <button (click)="navigateToSocials()" mat-button class="tool-bar-button">Skills</button>
     <button (click)="navigateToSocials()" mat-button class="tool-bar-button">Socials</button>
   </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
+<footer>
+
+  <div class="left-section">
+    <p>fack</p>
+    <span class="spacer"></span>
+    <p>&copy; 2023 Vrglab. All rights reserved.</p>
+  </div>
+</footer>

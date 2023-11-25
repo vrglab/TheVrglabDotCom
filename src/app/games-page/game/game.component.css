@@ -1,0 +1,32 @@
+.game-icon {
+  border-radius: 20%;
+}
+.game-div {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 320px;
+  height: 416px;
+  margin: 0;
+  text-align-all: center;
+}
+
+a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+b {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.published-on {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}

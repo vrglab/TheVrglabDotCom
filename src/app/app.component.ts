@@ -1,20 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { initializeApp } from "firebase/app";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAzmMeIwu9RR4fevs5MlXzEIRhSF9SY3ZA",
-  authDomain: "vrglab-50305.firebaseapp.com",
-  projectId: "vrglab-50305",
-  storageBucket: "vrglab-50305.appspot.com",
-  messagingSenderId: "869444409030",
-  appId: "1:869444409030:web:f8c196eac88e3b7b6129c7",
-  measurementId: "G-PGRJH5WLSD"
-};
-
+import {CacheService} from "./cache.service";
 
 @Component({
   selector: 'app-root',
@@ -24,9 +13,9 @@ const firebaseConfig = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  app: any;
+
   constructor(private router: Router) {
-    this.app = initializeApp(firebaseConfig);
+
   }
 
   navigateToHome() {
@@ -37,7 +26,14 @@ export class AppComponent {
     this.router.navigate(['/games']);
   }
 
+  navigateToSkills() {
+    this.router.navigate(['/skills']);
+  }
+
   navigateToSocials() {
     this.router.navigate(['/socials']);
+  }
+
+  ngOnInit(): void {
   }
 }

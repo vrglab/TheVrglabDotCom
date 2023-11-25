@@ -1,1 +1,7 @@
-<p>games-page works!</p>
+<div style="display: flex; flex-wrap: wrap;">
+<ng-container *ngFor="let game of data">
+  <ng-container *ngIf="game.published">
+    <app-game [game]="game"></app-game>
+  </ng-container>
+</ng-container>
+</div>
