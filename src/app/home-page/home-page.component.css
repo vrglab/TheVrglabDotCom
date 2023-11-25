@@ -30,7 +30,6 @@
   }
 }
 
-
 @media (max-width: 1000px) {
   .big-text {
     text-align: center;
@@ -54,20 +53,20 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .big-text {
-    text-align: center;
-    font-size: 40px !important;
-  }
-
-  .mid-text {
     text-align: center;
     font-size: 20px !important;
   }
 
-  .small-text {
+  .mid-text {
     text-align: center;
     font-size: 10px !important;
+  }
+
+  .small-text {
+    text-align: center;
+    font-size: 5px !important;
   }
   .big-image {
     align: center;

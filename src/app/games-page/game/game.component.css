@@ -30,3 +30,108 @@ b {
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media (max-width: 1000px) {
+  .game-icon {
+    width: 220px;
+    height: 150px;
+  }
+  .game-div {
+    width: 220px;
+    height: 316px;
+  }
+
+  a {
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  b {
+    font-size: 10px;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .published-on {
+    font-size: 10px;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .game-icon {
+    width: 120px;
+    height: 100px;
+  }
+  .game-div {
+    width: 120px;
+    height: 216px;
+  }
+
+  a {
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  b {
+    font-size: 5px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .published-on {
+    font-size: 8px;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .game-icon {
+    width: 90px;
+    height: 60px;
+  }
+  .game-div {
+    width: 90px;
+    height: 116px;
+  }
+
+  a {
+    font-size: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  b {
+    font-size: 3px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .published-on {
+    font-size: 5px;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
