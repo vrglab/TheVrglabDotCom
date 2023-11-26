@@ -6,7 +6,9 @@
 }
 
 .center-div {
-  padding-left: 30%;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 
@@ -27,11 +29,6 @@
   }
 }
 
-@media (max-width: 1920px) {
-  .center-div {
-    padding-left: 23%;
-  }
-}
 
 @media (max-width: 1000px) {
   .big-text {
@@ -49,9 +46,6 @@
     font-size: 10px !important;
   }
 
-  .center-div {
-    padding-left: 20%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -70,9 +64,6 @@
     font-size: 5px !important;
   }
 
-  .center-div {
-    padding-left: 10%;
-  }
 }
 
 @media (max-width: 500px) {
@@ -89,9 +80,5 @@
   .small-text {
     text-align: center;
     font-size: 5px !important;
-  }
-
-  .center-div {
-    padding-left: 15%;
   }
 }

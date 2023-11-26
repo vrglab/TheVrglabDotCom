@@ -4,7 +4,9 @@
     flex-wrap: wrap;
   }
 }
-
+.games-div {
+  padding-bottom: 25px;
+}
 @media (max-width: 840px) {
   .games-div {
     padding-left: 25%;

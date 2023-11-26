@@ -19,6 +19,10 @@ export class GameComponent {
     return parseFloat(trimmedString == undefined ? '0' : trimmedString);
   }
 
+  onClick(): void {
+    window.open(this.game?.url, '_blank');
+  }
+
   formatMoney(value: number | undefined, currency: string = 'USD', locales: string = 'en-US'): string {
     const formatter = new Intl.NumberFormat(locales, {
       style: 'currency',

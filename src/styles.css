@@ -6,7 +6,9 @@ html
 }
 
 body {
-  width: 99%;
+  left: 0;
+  width: 100%;
+  margin: 0px !important;
   background-size: cover;
   background: linear-gradient(#041E00, #470037) no-repeat;
 }
@@ -118,8 +120,7 @@ html, body { height: 99%; }
   }
 }
 
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .logo {
     float: left;
     width: 100px;

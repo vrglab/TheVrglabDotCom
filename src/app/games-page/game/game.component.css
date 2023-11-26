@@ -11,7 +11,7 @@
   white-space: nowrap;
 }
 
-a {
+button {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -45,7 +45,7 @@ b {
     height: 316px;
   }
 
-  a {
+  button {
     font-size: 10px;
     position: absolute;
     bottom: 0;
@@ -82,7 +82,7 @@ b {
     height: 216px;
   }
 
-  a {
+  button {
     font-size: 10px;
     position: absolute;
     bottom: 0;
