@@ -1,17 +1,24 @@
 html
 {
-  background:  repeating-linear-gradient(66deg, #041E00, #470037);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  height: 100%;
+  background: #470037;
 }
+
+body {
+  width: 100%;
+  background-size: cover;
+  background: linear-gradient(#041E00, #470037) no-repeat;
+}
+
+
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
   color: #fff;
+  background: linear-gradient( to left top, #041E00, #470037);;
   padding: 10px;
 }
 
@@ -144,7 +151,7 @@ html, body { height: 99%; }
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .logo {
     float: left;
     width: 100px;
@@ -171,3 +178,60 @@ html, body { height: 99%; }
     padding: 1px;
   }
 }
+
+@media (max-width: 600px) {
+  .logo {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+
+  button
+  {
+    padding: 5px 12px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+
+  .tool-bar-button {
+    font-size: 15px;
+  }
+
+  .spacer {
+    padding: 1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+  }
+
+  button
+  {
+    padding: 5px 12px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+  }
+
+  footer {
+    font-size: 4px;
+  }
+
+  .tool-bar-button {
+    font-size: 10px;
+  }
+
+  .spacer {
+    padding: 1px;
+  }
+}
+

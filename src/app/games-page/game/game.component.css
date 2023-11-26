@@ -8,6 +8,7 @@
   height: 416px;
   margin: 0;
   text-align-all: center;
+  white-space: nowrap;
 }
 
 a {
@@ -22,13 +23,16 @@ b {
   bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
-.published-on {
+.description-text {
   position: absolute;
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 @media (max-width: 1000px) {
@@ -57,12 +61,14 @@ b {
     transform: translateX(-50%);
   }
 
-  .published-on {
+  .description-text {
     font-size: 10px;
     position: absolute;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
+    text-overflow: ellipsis;
+    white-space: normal;
   }
 }
 
@@ -85,53 +91,21 @@ b {
   }
 
   b {
-    font-size: 5px;
+    font-size: 8px;
     position: absolute;
     bottom: 40%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .published-on {
+  .description-text {
     font-size: 8px;
     position: absolute;
     bottom: 15%;
-    left: 50%;
+    left: 55%;
+    width: 100px;
     transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 500px) {
-  .game-icon {
-    width: 90px;
-    height: 60px;
-  }
-  .game-div {
-    width: 90px;
-    height: 116px;
-  }
-
-  a {
-    font-size: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  b {
-    font-size: 3px;
-    position: absolute;
-    bottom: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .published-on {
-    font-size: 5px;
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    text-overflow: ellipsis;
+    white-space: normal;
   }
 }
