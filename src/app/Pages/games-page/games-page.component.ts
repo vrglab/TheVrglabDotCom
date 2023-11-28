@@ -3,8 +3,8 @@ import { ItchioService, Game } from './itchio.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import {GameComponent} from "./game/game.component";
-import {AppComponent} from "../app.component";
-import {CacheService} from "../cache.service";
+import {AppComponent} from "../../app.component";
+import {CacheService} from "../../cache.service";
 
 
 @Component({

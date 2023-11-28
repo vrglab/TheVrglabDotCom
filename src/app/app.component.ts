@@ -18,22 +18,7 @@ export class AppComponent {
 
   }
 
-  navigateToHome() {
-    this.router.navigate(['/']);
-  }
-
-  navigateToGames() {
-    this.router.navigate(['/games']);
-  }
-
-  navigateToSkills() {
-    this.router.navigate(['/skills']);
-  }
-
-  navigateToSocials() {
-    this.router.navigate(['/socials']);
-  }
-
-  ngOnInit(): void {
+  navigateToPages(page_name: string) {
+    this.router.navigate(['/'+page_name]);
   }
 }
