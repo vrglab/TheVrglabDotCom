@@ -29,31 +29,27 @@ export class GamesPageComponent implements OnInit{
 
   loadData() {
     if(CacheService.get("games-"+this.context) == null) {
-
+      let site_link = '';
       if(this.context == 'gamejolt') {
-        this.requestService.getData('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gamejolt.com/site-api/web/library/games/developer/@vrglab')).subscribe(
-          (response) => {
-            this.data = JSON.parse(response.contents)['payload']['games'];
-            console.log(this.data);
-            CacheService.set("games-"+this.context, this.data);
-          },
-          (error) => {
-            console.error('Error:', error);
-          }
-        );
+        site_link = 'https://gamejolt.com/site-api/web/library/games/developer/@vrglab';
       }
-
       if(this.context == 'itchio') {
-        this.requestService.getData('https://api.allorigins.win/get?url=' + encodeURIComponent('https://itch.io/api/1/3rF63nNkfKYSzTomDcNghRn6pJQFZ3qDK7rnCMe0/my-games')).subscribe(
-          (response) => {
-            this.data = JSON.parse(response.contents)['games'];
-            CacheService.set("games-"+this.context, this.data);
-          },
-          (error) => {
-            console.error('Error:', error);
-          }
-        );
+        site_link = 'https://itch.io/api/1/3rF63nNkfKYSzTomDcNghRn6pJQFZ3qDK7rnCMe0/my-games';
       }
+      this.requestService.getData('https://api.allorigins.win/get?url=' + encodeURIComponent(site_link)).subscribe(
+        (response) => {
+          if(this.context == 'gamejolt') {
+            this.data = JSON.parse(response.contents)['payload']['games'];
+          }
+          if(this.context == 'itchio') {
+            this.data = JSON.parse(response.contents)['games'];
+          }
+          CacheService.set("games-"+this.context, this.data);
+        },
+        (error) => {
+          console.error('Error:', error);
+        }
+      );
     } else{
       // @ts-ignore
       this.data = CacheService.get("games-"+this.context);
