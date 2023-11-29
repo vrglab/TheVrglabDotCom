@@ -1,5 +1,7 @@
 .game-icon {
   border-radius: 20%;
+  width: 305px;
+  height: 240px;
 }
 .game-div {
   position: relative;

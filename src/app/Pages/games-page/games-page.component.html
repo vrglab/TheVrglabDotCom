@@ -1,7 +1,7 @@
 <div class="games-div">
 <ng-container *ngFor="let game of data">
-  <ng-container *ngIf="game.published">
-    <app-game [game]="game"></app-game>
+  <ng-container *ngIf="game.published || game.status > 0">
+    <app-game [game]="game" [context]="context"></app-game>
   </ng-container>
 </ng-container>
 </div>

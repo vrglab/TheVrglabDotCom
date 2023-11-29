@@ -13,7 +13,7 @@ export class ProjectsPageComponent {
   constructor(private router: Router) {
   }
 
-  navigateToPages(page_name: string) {
-    this.router.navigate(['/'+page_name]);
+  navigateToPages(page_name: string, context: any) {
+    this.router.navigate(['/projects/'+page_name], { queryParams: { context: context } });
   }
 }

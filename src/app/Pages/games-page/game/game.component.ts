@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {CommonModule, formatCurrency} from '@angular/common';
-import {Earnings, Game} from '../itchio.service';
+import {Earnings, ItchioGame} from '../itchio-server-result';
 @Component({
   selector: 'app-game',
   standalone: true,
@@ -9,27 +9,26 @@ import {Earnings, Game} from '../itchio.service';
   styleUrl: './game.component.css'
 })
 export class GameComponent {
-  @Input() game: Game | undefined;
-
-  protected readonly formatCurrency = formatCurrency;
-
-  removeTrailingZeros(number: number | undefined): number {
-    const numberString = number?.toString();
-    const trimmedString = numberString?.replace(/\.?0+$/, '');
-    return parseFloat(trimmedString == undefined ? '0' : trimmedString);
-  }
+  @Input() game: any | undefined;
+  @Input() context: string = 'itchio';
 
   onClick(): void {
-    window.open(this.game?.url, '_blank');
+    if(this.context == 'itchio') {
+      window.open(this.game?.url, '_blank');
+    }
+    if(this.context == 'gamejolt') {
+      window.open('https://gamejolt.com/games/'+this.game?.slug+'/'+this.game?.id, '_blank');
+    }
   }
 
-  formatMoney(value: number | undefined, currency: string = 'USD', locales: string = 'en-US'): string {
-    const formatter = new Intl.NumberFormat(locales, {
-      style: 'currency',
-      currency: currency,
-      minimumFractionDigits: 2,
-    });
+  GetIconLink():string {
+    if(this.context == 'itchio') {
+      return this.game?.cover_url;
+    }
 
-    return formatter.format(value == undefined ? 0 : this.removeTrailingZeros(value));
+    if(this.context == 'gamejolt') {
+      return this.game?.img_thumbnail;
+    }
+    return '';
   }
 }

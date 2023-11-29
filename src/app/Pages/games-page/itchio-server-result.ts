@@ -1,19 +1,3 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class ItchioService {
-  private itchioApiGetGamesLink = 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://itch.io/api/1/3rF63nNkfKYSzTomDcNghRn6pJQFZ3qDK7rnCMe0/my-games')
-  constructor(private http: HttpClient) { }
-
-  getData(): Observable<any> {
-    return this.http.get<any>(this.itchioApiGetGamesLink);
-  }
-}
-
 export interface User {
   username: string;
   id: number;
@@ -27,7 +11,7 @@ export interface Earnings {
   amount_formatted: string;
 }
 
-export interface Game {
+export interface ItchioGame {
   type: string;
   p_linux?: boolean;
   p_osx?: boolean;
