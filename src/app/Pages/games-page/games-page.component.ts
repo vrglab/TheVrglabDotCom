@@ -25,7 +25,6 @@ export class GamesPageComponent implements OnInit{
       this.context = params['context'];
       this.loadData();
     });
-    console.log(CacheService.cache);
   }
   reloadCache() {
     this.requestService.getData(this.context).subscribe(
