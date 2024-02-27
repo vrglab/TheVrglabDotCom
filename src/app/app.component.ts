@@ -13,9 +13,10 @@ import {CacheService} from "./cache.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentYear: number;
 
   constructor(private router: Router) {
-
+    this.currentYear =  new Date().getFullYear()
   }
 
   navigateToPages(page_name: string) {
