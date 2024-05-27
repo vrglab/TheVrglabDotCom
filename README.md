@@ -1,5 +1,7 @@
 # Vrglab
 
+This is the source code of my personal website [TheVrglab.com](https://www.thevrglab.com) , it also is the first project i made using angular and Firebase
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
 ## Development server
