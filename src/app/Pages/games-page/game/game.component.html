@@ -1,12 +1,12 @@
 <div class="game-div">
   <img src="{{GetIconLink()}}" class="game-icon">
     <div>
-      <b>{{game?.title}}</b>
+      <b  class="game-div-b">{{game?.title}}</b>
       <span class="spacer"></span>
 
       <span class="description-text">{{game?.short_text}}</span>
       <span class="spacer"></span>
     </div>
-  <button (click)="onClick()">View page</button>
+  <button class="game-div-button" (click)="onClick()">View page</button>
 </div>
 <span class="spacer"></span>
