@@ -21,7 +21,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #fff;
+  color: var(--FONT_COLOR);
   /*background: linear-gradient( to left top, #041E00, #470037);*/
   background-color: var(--BASE_BG_COLOR);
 }
