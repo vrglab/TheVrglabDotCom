@@ -1,5 +1,14 @@
+@font-face {
+  font-family: '11px2bus';
+  src: url('assets/11px2bus.ttf.woff') format('woff'),
+  url('assets/11px2bus.ttf.svg#11px2bus') format('svg'),
+  url('assets/11px2bus.ttf.eot');
+  font-weight: 20 !important;
+}
+
 :root{
-  --BASE_BG_COLOR: #030309;
+  --BASE_BG_COLOR_DARK: #08081a;
+  --BASE_BG_COLOR_LIGHT: #182e36;
   --BASE_BUTTON_COLOR: #14143b;
   --FONT_COLOR: #e4e4ff;
   --GAME_BOX_SHADOW: #14143b;
