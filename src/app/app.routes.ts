@@ -11,5 +11,5 @@ export const routes: Routes = [
   {path: 'projects/games', component: GamesPageComponent},
   {path: 'socials', component: SocialsPageComponent},
   {path: 'projects', component: ProjectsPageComponent},
-  { path: '**', component: PageNotFoundComponent }
+  {path: '**', component: PageNotFoundComponent}
 ];
