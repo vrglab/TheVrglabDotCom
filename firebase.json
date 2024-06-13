@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "site": "vrglab-50305",
     "public": "dist/vrglab/browser",
     "ignore": [
       "firebase.json",
